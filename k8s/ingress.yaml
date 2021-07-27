@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: appexemplo
+  namespace: app-py
+spec:
+  rules:
+  - host: aula6.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: svcappexemplo
+          servicePort: 5000
+        pathType: ImplementationSpecific
